@@ -1,3 +1,4 @@
+//console,declarations and basics
 const myname={value:'I am sharvil'};
 myname.value='Myself Pandit';
 console.log(myname.value);
