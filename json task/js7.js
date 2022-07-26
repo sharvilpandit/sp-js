@@ -89,10 +89,32 @@ var jsondata=[{
   ]
         console.log(jsondata[0]);
     //    console.log(jsondata.duration);
+      let destadd=jsondata.destination_addresses;
       
-    for(destination_addresses of jsondata[0].destination_addresses){
-        document.getElementById("row").innerHTML=destination_addresses;
+    for(let destadd of jsondata[0].destination_addresses){
+      console.log(destadd);
+      let sp=document.createElement('td');
+      sp.textContent=`destadd`;
+      document.getElementById("col1").innerHTML=destadd;
     }
+    for(elements of jsondata[0].rows){
+
+        elements=elements.elements;
+        console.log(elements);
+        elements.forEach(destination => {
+          console.log(destination.distance.text, " is distance");
+          console.log(destination.duration.text, " is duration");
+          document.getElementById("col2").innerHTML=destination.distance.text;
+          document.getElementById("col3").innerHTML=destination.duration.text;
+        });
+     
+        for(i=0;i<jsondata[0].destination_addresses;i++){
+          document.getElementById("col1").innerHTML=destination_addresses;
+        }
+      
+    }
+
+   
 
 
         // jsondata.forEach(destination_addresses => {
