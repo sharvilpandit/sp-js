@@ -9,50 +9,53 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="datatab">
     
-    <div>
-    <form name="userdata" method="post">
-        <div class="container">
-            <table class="m-2 table table-striped">
-            <tr><th colspan="2">Registration Form</th></tr>  
-            <tr><td><label for="name">Name:</td>
-            <td><input type="text" id="username" name="username" class="form-control" placeholder="Full-name">
-            </label></td></tr>
+            <table class="table">
+                <form name="userdata" method="post">
+            <tr><th colspan="2" class="text-center fs-2">Registration Form</th></tr>  
+            <tr><td><label for="name">Name:<br>
+            <input type="text" id="username" name="username" class="form-control-md" placeholder="Full-name">
+            </label>
+            <p class="error" id="namerror"></p></td></tr>
 
 
-            <tr><td><label for="email">email:</td>
-            <td><input type="email" id="mail" name="mail">
-            </label></td></tr>
+            <tr><td><label for="email">Email:<br>
+            <input type="email" id="mail" name="mail" class="form-control-md">
+            </label>
+            <p class="error" id="mailerror"></p></td></tr>
 
-            <tr><td><label for="password">password:</td>
-             <td><input type="password" id="pwd" name="pwd"  maxlength="16">
-            </label></td></tr>
+            <tr><td><label for="password">password:<br>
+            <input type="password" id="pwd" name="pwd"  maxlength="16" class="form-control-md">
+            </label>
+            <p class="error" id="pwderror"></p></td></tr>
 
-            <tr><td>City:</td>
-            <td><select id="city" name="city" class="stripes">
+            <tr><td>City:<br>
+            <select id="city" name="city" class="form-select-md">
                 <option value="">Select</option>
                 <option value="Ahmedabad">Ahmedabad</option>
                 <option value="Pune">Pune</option>
                 <option value="Benglore">Banglore</option>
-            </select></td></tr>
+            </select>
+            <p class="error" id="cityerror"></p></td></tr>
                 
 
             <tr><td>
-                <label for="gender">Gender:</td>
-                <td><input type="radio" name="gender" id="male" value="male">male
-                 <input type="radio" name="gender" id="female" value="female">female   
-                </label></td></tr>
+                <label for="gender" class="form-check-label">Gender:<br>
+            
+                   <span class="p-2"> <input type="radio" class="form-check-input" name="gender" id="male" value="male">male</span>
+                    <span class="p-2"><input type="radio" class="form-check-input" name="gender" id="female" value="female">female</span>   
+                </label>
+            <p class="error" id="generror"></p></td></tr>
 
-            <tr class="ms-5"><td colspan="2"><button type="submit" id="submit">submit</button></td></tr>
+            <tr class="ms-5"><td colspan="2" class="text-center"><button type="submit" id="submit">submit</button></td></tr>
 
 
-        </table>
-        </div>
+        </table>   
     </form>
-   
-</div>
-<div >
-    <table id="printdata" class="table2 table-bordered table-striped">
+   </div>
+<div class="datatab">
+    <table id="printdata" class="table2">
         <thead>
             <tr><th>Name</th><th>Email</th><th>City</th><th>Gender</th></tr>
         </thead>

@@ -2,21 +2,33 @@ button{
     background-color: blue;
     border-radius: 40px;
     color: aliceblue;
+    align-content: center;
 }  
-.table-striped{
-    --bs-table-striped-bg:black;
-    --bs-table-striped-color:white;
-    width: max-content;
-    text-align: center;
-    
-}
 .table{
-    border: 4px solid blue;
-    display: flex;
-    transform: translate(80%,0) ;
+    width:40%;
+    justify-content: center;
+    border-style: ridge;
+    font: bold; 
 } 
 .table2{
-    border: 4px solid rgb(255, 196, 47);
-    margin: 5rem;
+    border: 4px ridge rgba(96, 95, 92, 0.681);
+    padding: 20px;
+    background-color:rgba(255, 118, 118, 0.407);
+    font-weight: bold;
+    width: 80%;
+    color: rgb(4, 23, 39);
     
 } 
+.form-control:hover,blank{
+    background-color: rgba(165, 42, 42, 0.229);
+    
+}
+.datatab{
+    justify-content: center;
+    display: flex;
+    margin-top:2rem;
+    box-shadow: 20% grey;
+}
+.error{
+    color:red;
+}
