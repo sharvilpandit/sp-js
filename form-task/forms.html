@@ -14,30 +14,30 @@
             <table class="table">
                 <form name="userdata" method="post">
             <tr><th colspan="2" class="text-center fs-2">Registration Form</th></tr>  
-            <tr><td><label for="name">Name:<br>
-            <input type="text" id="username" name="username" class="form-control-md" placeholder="Full-name">
+            <tr><td><label for="name" class="form-label">Name:<br>
+            <input type="text" id="username" name="username" class="form-control-sm" placeholder="Full-name">
             </label>
-            <p class="error" id="namerror"></p></td></tr>
+            <p class="text-danger" id="namerror"></p></td></tr>
 
 
-            <tr><td><label for="email">Email:<br>
-            <input type="email" id="mail" name="mail" class="form-control-md">
+            <tr><td><label for="email" class="form-label">Email:<br>
+            <input type="email" id="mail" name="mail" class="form-control-sm">
             </label>
-            <p class="error" id="mailerror"></p></td></tr>
+            <p class="text-danger" id="mailerror"></p></td></tr>
 
-            <tr><td><label for="password">password:<br>
-            <input type="password" id="pwd" name="pwd"  maxlength="16" class="form-control-md">
+            <tr><td><label for="password" class="form-label">password:<br>
+            <input type="password" id="pwd" name="pwd"  maxlength="16" class="form-control-sm">
             </label>
-            <p class="error" id="pwderror"></p></td></tr>
+            <p class="text-danger" id="pwderror"></p></td></tr>
 
-            <tr><td>City:<br>
-            <select id="city" name="city" class="form-select-md">
+            <tr><td><label for="city" class="form-label">City:</label><br>
+            <select id="city" name="city" class="form-select-lg">
                 <option value="">Select</option>
                 <option value="Ahmedabad">Ahmedabad</option>
                 <option value="Pune">Pune</option>
                 <option value="Benglore">Banglore</option>
             </select>
-            <p class="error" id="cityerror"></p></td></tr>
+            <p class="text-danger" id="cityerror"></p></td></tr>
                 
 
             <tr><td>
@@ -46,7 +46,7 @@
                    <span class="p-2"> <input type="radio" class="form-check-input" name="gender" id="male" value="male">male</span>
                     <span class="p-2"><input type="radio" class="form-check-input" name="gender" id="female" value="female">female</span>   
                 </label>
-            <p class="error" id="generror"></p></td></tr>
+            <p class="text-danger" id="generror"></p></td></tr>
 
             <tr class="ms-5"><td colspan="2" class="text-center"><button type="submit" id="submit">submit</button></td></tr>
 
