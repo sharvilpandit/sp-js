@@ -19,16 +19,14 @@ button{
     color: rgb(4, 23, 39);
     
 } 
-.form-control:hover,blank{
+/* .form-control:hover,blank{
     background-color: rgba(165, 42, 42, 0.229);
     
-}
+} */
 .datatab{
     justify-content: center;
     display: flex;
     margin-top:2rem;
     box-shadow: 20% grey;
 }
-.error{
-    color:red;
-}
+

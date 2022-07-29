@@ -52,27 +52,21 @@ function validate(event){
 
     if(uname.value === ''){
         document.getElementById("namerror").innerHTML="Pls fill name";
-        // return false;
     }
     if(email.value === ''){
         document.getElementById("mailerror").innerHTML="Pls fill Email";
-        // return false;
     }
     if(pwd.value === '' || pwd.value.length<8){
         document.getElementById("pwderror").innerHTML="Pls fill password.Must be of 8 Digits";       
-        // return false;
     }
     if(city.value ===''){
         document.getElementById("cityerror").innerHTML="Pls Select the City";    
-        // return false;
     }
     if(m.checked===false && fm.checked===false){
         document.getElementById("generror").innerHTML="Pls Select a valid option";
     }
     
     else{
-        
-        alert('here')
 
 
         if(email.value === '' || pwd.value === '' || pwd.value.length<8 || uname.value === '' || city.value ==='' ||m.checked===false && fm.checked===false ) {
