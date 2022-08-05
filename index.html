@@ -5,12 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="asyncawait.js"></script>
+    <script src="generator.js"></script>
 </head>
 
 <body>
     <p>good morning</p>
     <p class='warning'>Something has gone <em>very</em> wrong!</p>  
 
+    <button id="button">Alt+Shift+Click on me!</button>
+
+<script>
+  button.onclick = function(event) {
+    if (event.altKey && event.shiftKey) {
+      alert('Hooray!');
+    }
+  };
+</script>
+
+
+<iframe src="/" id="iframe"></iframe>
+
+<script>
+  let oldDoc = iframe.contentDocument;
+  iframe.onload = function() {
+    let newDoc = iframe.contentDocument;
+    // the loaded document is not the same as initial!
+    alert(oldDoc == newDoc); // false
+  };
+</script>
 </body>
 </html>
