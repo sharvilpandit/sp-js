@@ -247,7 +247,8 @@ function control(){
         !umail.value.match(regmail) ||
         !password.value.match(regpwd) ||
         !cntct.value.match(regct)||
-        city.value==='') {
+        city.value==='' ||
+        (male.checked==false && female.checked==false)) {
         submit.disabled=true;
     }
     if (
@@ -255,7 +256,8 @@ function control(){
         umail.value.match(regmail) &&
         password.value.match(regpwd) &&
         cntct.value.match(regct)&&
-        city.value!=='') {
+        city.value!=='' &&
+        (male.checked==true || female.checked==true)) {
         submit.disabled=false;
     }
     
