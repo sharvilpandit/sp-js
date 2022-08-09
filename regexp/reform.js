@@ -26,12 +26,28 @@ umail.addEventListener("keypress",()=>{
         document.getElementById('mailerror').innerHTML='';
     }
 });
+umail.addEventListener("blur",()=>{
+    if(umail.value.match(regmail)){
+        document.getElementById('mailerror').innerHTML='';
+    }
+    else{
+        document.getElementById('mailerror').innerHTML='Pls Enter valid mail with @ and .';
+    }
+});
 password.addEventListener("keypress",()=>{
      if(password===''){
         validate
     }
     else{
         document.getElementById('pwderror').innerHTML='';
+    }
+});
+password.addEventListener("blur",()=>{
+    if(password.value.match(regpwd)){
+        document.getElementById('pwderror').innerHTML='';
+    }
+    else{
+        document.getElementById('pwderror').innerHTML='Pls Enter valid password with Uppercase,lowercaseand number';
     }
 });
 city.addEventListener("click",()=>{
@@ -77,14 +93,14 @@ function validate(event){
         console.log(umail.value)
     }
     else{
-        document.getElementById('mailerror').innerHTML='Pls enter valid mail';
+        document.getElementById('mailerror').innerHTML='Pls enter mail';
     }
     if(password.value.match(regpwd)){
         document.getElementById('pwderror').innerHTML='';
         console.log(password.value)
     }
     else{
-        document.getElementById('pwderror').innerHTML='Pls enter valid pwd';
+        document.getElementById('pwderror').innerHTML='Pls enter pwd';
     }
     if(city.value==""){
         document.getElementById('cityerror').innerHTML='Pls Select city';
