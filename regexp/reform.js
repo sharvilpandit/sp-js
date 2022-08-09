@@ -6,7 +6,7 @@ let password = document.getElementById('pwd');
 let city = document.getElementById('city');
 let submit = document.getElementById('submit');
 form.addEventListener('submit', validate, false);
-submit.disable=false;
+submit.disabled=true;
 
 let regname = /^(\w){2,20}$/;
 let regmail = /^[A-Za-z_]{1,}@[A-Za-z]{1,}[.]{1}[A-Za-z.]{1,6}$/;
@@ -14,62 +14,69 @@ let regpwd = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}$/;
 let regct=/^(\+)?(\d){10,13}$/;
 
 uname.addEventListener('keypress', () => {
+    control();
     if (uname === '') {
         validate();
-        control();
+       
     } else {
         document.getElementById('namerror').innerHTML = '';
-        control();
+       
     }
 });
 umail.addEventListener('keypress', () => {
+    control();
     if (umail === '') {
         validate();
-        control();
+       
     } else {
         document.getElementById('mailerror').innerHTML = '';
        
     }
 });
 umail.addEventListener('blur', () => {
+    control();
     if (umail.value.match(regmail)) {
         document.getElementById('mailerror').innerHTML = '';
         
     } else {
         document.getElementById('mailerror').innerHTML =
             'Pls Enter valid mail with @ and .';
-            control();
+        
     }
 });
 cntct.addEventListener('keypress',()=>{
+    control();
     if(cntct==''){
        validate();
-       control();
+       
     }
     else{
         document.getElementById('cnterror').innerHTML='';
     }
 });
 cntct.addEventListener('blur',()=>{
+    control();
     if(cntct.value.match(regct)){
         document.getElementById('cnterror').innerHTML='';
         
     }
     else{
         document.getElementById('cnterror').innerHTML='Pls Enter Valid Contact';
-        control();
+        
     }
 });
 password.addEventListener('keypress', () => {
+    control();
     if (password === '') {
         validate();
-        control();
+       
     } else {
         document.getElementById('pwderror').innerHTML = '';
         
     }
 });
 password.addEventListener('blur', () => {
+    control();
     if (password.value.match(regpwd)) {
         document.getElementById('pwderror').innerHTML = '';
         
@@ -77,22 +84,24 @@ password.addEventListener('blur', () => {
         document.getElementById('pwderror').innerHTML =
         
             'Pls Enter valid password with Uppercase,lowercaseand number';
-            control();
+           
     }
 });
 city.addEventListener('click', () => {
+    control();
     if (city === '') {
         validate();
-        control();
+        
     } else {
         document.getElementById('cityerror').innerHTML = '';
-        control();
+       
     }
 });
 male.addEventListener('click', () => {
+    control();
     if (male.checked == false) {
         validate();
-        control();
+      
     } else {
         document.getElementById('generror').innerHTML = '';
          
@@ -100,9 +109,10 @@ male.addEventListener('click', () => {
     
 });
 female.addEventListener('click', () => {
+    control();
     if (female.checked == false) {
         validate();
-        control();
+       
     } else {
         document.getElementById('generror').innerHTML = '';
     }
@@ -184,7 +194,7 @@ function validate(event) {
         (male.checked==false && female.checked==false)) {
         console.log(false)
         return false;
-    }
+    } 
 
  
     let tr=document.createElement('tr');
@@ -232,13 +242,22 @@ function validate(event) {
 }
 
 function control(){
-//     if (
-//         uname.value.match(regname)==false ||
-//         umail.value.match(regmail)==false ||
-//         password.value.match(regpwd)==false ||
-//         cntct.value.match(regct)==false||
-//         city.value==='') {
-//         submit.disabled=true;
-//     }
+    if (
+        !uname.value.match(regname) ||
+        !umail.value.match(regmail) ||
+        !password.value.match(regpwd) ||
+        !cntct.value.match(regct)||
+        city.value==='') {
+        submit.disabled=true;
+    }
+    if (
+        uname.value.match(regname) &&
+        umail.value.match(regmail) &&
+        password.value.match(regpwd) &&
+        cntct.value.match(regct)&&
+        city.value!=='') {
+        submit.disabled=false;
+    }
+    
 }
 
