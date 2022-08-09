@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+    <div class="datatab">
+
+            
+        <table class="table">
+        <form name="userdata" method="post">
+        <tr><th colspan="2" class="text-center text-sucess fs-2">Registration Form</th></tr>  
+        <tr><td><label for="name" class="form-label fs-4">Name:<br>
+        <input type="text" id="username" name="username" class="form-control-lg" placeholder="Full-name">
+        </label>
+        <span><p class="text-danger" id="namerror"></p></span></td></tr>
+
+
+        <tr><td><label for="email" class="form-label fs-4">Email:<br>
+        <input type="mail" id="umail" name="mail" class="form-control-lg" placeholder="must have @ and .">
+        </label>
+        <span><p class="text-danger" id="mailerror"></p></span></td></tr>
+
+        <tr><td><label for="password" class="form-label fs-4">password:<br>
+        <input type="password" id="pwd" name="pwd"  maxlength="16" class="form-control-lg"> 
+        </label>
+        <span><p class="text-danger" id="pwderror"></p></span></td></tr>
+
+        <tr><td><label for="city" class="form-label fs-4">City:</label><br>
+        <select id="city" name="city" class="form-select-lg">
+            <option value="">Select</option>
+            <option value="Ahmedabad">Ahmedabad</option>
+            <option value="Pune">Pune</option>
+            <option value="Benglore">Banglore</option>
+        </select>
+        <p class="text-danger" id="cityerror"></p></td></tr>
+            
+
+        <tr><td>
+            <label for="gender" class="form-label fs-4">Gender:<br>
+        
+               <span class="p-2"> <input type="radio" class="form-check-input " name="gender" id="male" value="male">male</span>
+                <span class="p-2"><input type="radio" class="form-check-input " name="gender" id="female" value="female">female</span>   
+            </label>
+        <span><p class="text-danger" id="generror"></p></span></td></tr>
+
+        <tr class="ms-5"><td colspan="2" class="text-center"><button type="submit" id="submit" class="btn rounded-pill bg-success fs-4">submit</button></td></tr>
+
+
+    </table>   
+</form>
+<script src="reform.js"></script>
+</div>
+</body>
+</html>
